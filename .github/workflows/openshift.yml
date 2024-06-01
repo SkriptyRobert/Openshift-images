@@ -30,7 +30,7 @@ env:
   # 🖊️ EDIT your repository secrets to log into your OpenShift cluster and set up the context.
   # See https://github.com/redhat-actions/oc-login#readme for how to retrieve these values.
   # To get a permanent token, refer to https://github.com/redhat-actions/oc-login/wiki/Using-a-Service-Account-for-GitHub-Actions
-  OPENSHIFT_SERVER: ${{ secrets.OPENSHIFT_SERVER }}
+  OPENSHIFT_SERVER: ${{ secrets.OPENSHIFT_URL }}
   OPENSHIFT_TOKEN: ${{ secrets.OPENSHIFT_TOKEN }}
   # 🖊️ EDIT to set the kube context's namespace after login. Leave blank to use your user's default namespace.
   OPENSHIFT_NAMESPACE: pesourob-nginx-bitnami
@@ -47,7 +47,7 @@ env:
   # Registries such as GHCR, Quay.io, and Docker Hub are supported.
   IMAGE_REGISTRY: docker.io/robertpesout
   IMAGE_REGISTRY_USER: robertpesout
-  IMAGE_REGISTRY_PASSWORD: ${{ secret.REGISTRY_PASSWORD }}
+  IMAGE_REGISTRY_PASSWORD: ${{ secrets.REGISTRY_PASSWORD }}
 
   # 🖊️ EDIT to specify custom tags for the container image, or default tags will be generated below.
   IMAGE_TAGS: ""
