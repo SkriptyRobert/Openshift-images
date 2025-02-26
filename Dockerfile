@@ -21,7 +21,7 @@ ENV HOME="/" \
 
 COPY prebuildfs /
 SHELL ["/bin/bash", "-o", "errexit", "-o", "nounset", "-o", "pipefail", "-c"]
-# Install required system packages and dependencies
+#  system packages and dependencies
 RUN install_packages ca-certificates curl gettext libcrypt1 libgeoip1 libpcre3 libssl3 openssl procps zlib1g
 RUN mkdir -p /tmp/bitnami/pkg/cache/ ; cd /tmp/bitnami/pkg/cache/ ; \
     COMPONENTS=( \
